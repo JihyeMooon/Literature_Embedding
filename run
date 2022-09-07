@@ -1,0 +1,104 @@
+#!/usr/bin/env bash
+#!/bin/sh
+
+if [ $1 == 'demo_a' ]; then
+  echo 'Running all demos'
+  echo 'demo a -- '
+  EMBEDDING_PATH='../data/old_model'
+  STEP4_OUTPUT_PATH='../results/demo_a' 
+  python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+  
+elif [ $1 == 'demo_b' ]; then
+  echo 'demo b -- ' 
+  python -u step1_data_collection.py 'heart' 50000 1 '../results/demo_b' 
+  python -u step2_data_preprocessing.py '../results/demo_b' '../results/demo_b'
+  python -u step3_literature_embedding_training.py '../results/demo_b' 10 '../results/pre_trained_demo'
+  python -u step4_CVD_risk_factor_identification.py 'pre_trained_demo'
+
+elif [ $1 == 'all_demo' ]; then
+  echo 'Running all demos'
+  echo 'demo a -- '
+  EMBEDDING_PATH='../data/old_model'
+  STEP4_OUTPUT_PATH='../results/demo_a' 
+  #python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+  
+  echo 'demo b -- '
+  QUERY_WORD='heart'
+  NUM_WORD_BASED_DATA=50000
+  NUM_GENE_BASED_DATA=10
+  BASE_PATH='../results/'
+  DATA_COLLECTION_PATH='../results/demo_b'
+  PREPROCESSEING_PATH='../results/demo_b'
+  EMBEDDING_NAME='pre_trained_demo' 
+  EMBEDDING_PATH='../results/pre_trained_demo'
+  EPOCH=2
+  STEP4_OUTPUT_PATH='../results/CVD_searches'
+
+  python -u step1_data_collection.py $QUERY_WORD $NUM_WORD_BASED_DATA $NUM_GENE_BASED_DATA $DATA_COLLECTION_PATH
+  python -u step2_data_preprocessing.py $DATA_COLLECTION_PATH $PREPROCESSEING_PATH
+  python -u step3_literature_embedding_training.py $PREPROCESSEING_PATH $EPOCH $EMBEDDING_NAME
+  python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+
+
+
+
+  ##backup
+
+  echo 'Running all demos'
+  echo 'demo a -- '
+  EMBEDDING_PATH='../data/old_model'
+  STEP4_OUTPUT_PATH='../results/demo_a' 
+  #python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+  
+  echo 'demo b -- '
+  QUERY_WORD='heart'
+  NUM_WORD_BASED_DATA=50000
+  NUM_GENE_BASED_DATA=10
+  BASE_PATH='../results/'
+  DATA_COLLECTION_PATH='../data/demo_files'
+  PREPROCESSEING_PATH='../results/demo_b'
+  EMBEDDING_NAME='pre_trained_demo'
+  EMBEDDING_PATH='../results/pre_trained_demo'
+  EPOCH=2
+  STEP4_OUTPUT_PATH='../results/CVD_searches'
+
+  #python -u step1_data_collection.py $QUERY_WORD $NUM_WORD_BASED_DATA $NUM_GENE_BASED_DATA $DATA_COLLECTION_PATH
+  #python -u step2_data_preprocessing.py $DATA_COLLECTION_PATH $PREPROCESSEING_PATH
+  PREPROCESSEING_PATH='../data/demo_b'
+  python -u step3_literature_embedding_training.py $PREPROCESSEING_PATH $EPOCH $EMBEDDING_PATH
+  python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+  
+else 
+  echo 'Running all demos'
+  echo 'demo a -- '
+  EMBEDDING_PATH='../data/old_model'
+  STEP4_OUTPUT_PATH='../results/demo_a' 
+  #python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+  
+  echo 'demo b -- '
+  QUERY_WORD='heart'
+  NUM_WORD_BASED_DATA=50000
+  NUM_GENE_BASED_DATA=10
+  BASE_PATH='../results/'
+  DATA_COLLECTION_PATH='..data/old_preprocessed_data'#'../data/demo_files'#'../data/demo_files'
+  PREPROCESSEING_PATH='../results/demo_b'
+  PREPROCESSEING_PATH='../data/old_preprocessed_data'
+  EMBEDDING_NAME='pre_trained_demo'
+  EMBEDDING_PATH='../results/local_test'
+  EPOCH=2
+  STEP4_OUTPUT_PATH='../results/CVD_searches'
+
+  #python -u step1_data_collection.py $QUERY_WORD $NUM_WORD_BASED_DATA $NUM_GENE_BASED_DATA $DATA_COLLECTION_PATH
+  #python -u step2_data_preprocessing.py $DATA_COLLECTION_PATH $PREPROCESSEING_PATH
+  #PREPROCESSEING_PATH='../data/demo_b'
+  #python -u step3_literature_embedding_training.py $PREPROCESSEING_PATH $EPOCH $EMBEDDING_PATH
+  #python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+  
+  #python -u step2_data_preprocessing.py $DATA_COLLECTION_PATH $PREPROCESSEING_PATH
+  #PREPROCESSEING_PATH='../data/demo_b'
+  EPOCH=2
+  python -u step3_literature_embedding_training.py $PREPROCESSEING_PATH $EPOCH $EMBEDDING_PATH
+  python -u step4_CVD_risk_factor_identification.py $EMBEDDING_PATH $STEP4_OUTPUT_PATH
+fi
+
+
