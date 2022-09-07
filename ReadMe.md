@@ -11,7 +11,7 @@ This code is aimed to provide the implementation of 1) **Literature data collect
 1. [Introduction](#introduction) 
 2. [Code Implementations and Guidelines](#gudelines)
     0. [Demo](#demo)
-        1. [Default demo for CodeOcean](#default_demo")
+        1. [Default demo for CodeOcean](#default_demo)
         2. [CVD risk factors, genes, and associated information identifications](#demo1)
         3. [All stepts to build a Literature Embedding Model (Data Collection ~ Model Training)](#demo2) 
     1. [Literature data collection](#collection)
