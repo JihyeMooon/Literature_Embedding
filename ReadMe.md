@@ -234,14 +234,11 @@ Our FS computes the
 ~~~~
 
 ### 4. Results <a name="results"></a>
-
 In our manuscript, we put three queries ('stroke', 'atrial fibllilation', 'ventricular fibllilation') for CVD risk factor identifications. We analyzed whether or not the captured words and genes were correctly identified as risk factors and associated symptoms for the input query words. Our model accurately (average accuracy of >96%) captured associated risk factors, symptoms, and genes for a given input query word. Details are described in our publisehd manuscript. 
 
 We also used our embedding model as FS and DR tasks on cohort data for CVD prediction. Using the selected features and reduced dimensions, our FS and DR method provides better performance with fastest computation time when compared with other popular FS and DR methods - Random Forest, Decision Tree, H2FS, UMAP, and PCA. 
 
 Our model has the potential to facilitate easier collation of multifaceted information for better data mining of vast publicly available data so that efficient and accurate risk factors and symptoms can be identified, which enables better-informed decisions for CVD prediction and treatment. 
 
-### 5. GitHub Source <a name="github"></a>
--------------
-
-This project is also hosted on GitHub ([link](https://github.com/JihyeMooon/ESA_journal)) and is actively developed.
+### 5. CodeOcean Source <a name="github"></a>
+This project is also hosted on CodeOcean ([link]([https://github.com/JihyeMooon/ESA_journal](https://codeocean.com/capsule/9043589/tree/v1))). CodeOcean version provides a complete model development environment! 
