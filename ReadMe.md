@@ -241,4 +241,4 @@ We also used our embedding model as FS and DR tasks on cohort data for CVD predi
 Our model has the potential to facilitate easier collation of multifaceted information for better data mining of vast publicly available data so that efficient and accurate risk factors and symptoms can be identified, which enables better-informed decisions for CVD prediction and treatment. 
 
 ### 5. CodeOcean Source <a name="github"></a>
-This project is also hosted on CodeOcean ([link]([https://github.com/JihyeMooon/ESA_journal](https://codeocean.com/capsule/9043589/tree/v1))). CodeOcean version provides a complete model development environment! 
+This project is also hosted on CodeOcean at [Link](https://codeocean.com/capsule/9043589/tree/v1). CodeOcean version provides a complete model development environment! 
