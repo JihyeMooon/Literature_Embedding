@@ -1,8 +1,9 @@
-#### **A Literature Embedding Model for Cardiovascular Disease Prediction using Risk Factors, Symptoms, and Genotype Information**
-##### Authors: Jihye Moon, Hugo F. Posada-Quintero, and *Ki. H. Chon 
-**Corresponding author's address:** ki.chon@uconn.edu, 
+#### **[A Literature Embedding Model for Cardiovascular Disease Prediction using Risk Factors, Symptoms, and Genotype Information](https://www.sciencedirect.com/science/article/abs/pii/S0957417422019480)**
+##### Authors: Jihye Moon, Hugo F. Posada-Quintero, and Ki. H. Chon 
 **Q&A for codes:** jihye.moon@uconn.edu
 (Accepted by Expert System with Application, Aug. 24. 2022)
+
+-> This source code with Docker is provided at [Link](https://codeocean.com/capsule/9043589/tree/v1)
 
 ### Contents
 
@@ -241,4 +242,4 @@ We also used our embedding model as FS and DR tasks on cohort data for CVD predi
 Our model has the potential to facilitate easier collation of multifaceted information for better data mining of vast publicly available data so that efficient and accurate risk factors and symptoms can be identified, which enables better-informed decisions for CVD prediction and treatment. 
 
 ### 5. CodeOcean Source <a name="github"></a>
-This project is also hosted on CodeOcean at [Link](https://codeocean.com/capsule/9043589/tree/v1). CodeOcean version provides a complete model development environment! 
+This code is also released to CodeOcean at [Link](https://codeocean.com/capsule/9043589/tree/v1). CodeOcean version provides a complete model development environment! 
